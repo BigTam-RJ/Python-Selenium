@@ -1,0 +1,14 @@
+{
+    "json":[
+        {
+            "Nome": "João da Silva",
+            "e-mail": "joao@dasilva.com",
+            "Telefone": "21 8937-83098"
+        },
+        {
+            "Nome": "João Carlos",
+            "e-mail": "joao@carlos.com",
+            "Telefone": "22 38937-8308" 
+        }
+    ]
+}
