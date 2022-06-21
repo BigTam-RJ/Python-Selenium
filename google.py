@@ -7,7 +7,8 @@ import json
 
 elements = {
     'url_google': 'https://www.google.com.br/',
-    'field': '/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input'
+    'field': '/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input',
+    'text': 'alter do chão'
 }
 
 def open_site(driver):
@@ -16,8 +17,9 @@ def open_site(driver):
     driver.implicitly_wait(30) # aguarda por 30s o site carregar
 
 def search(driver):
-    v_field = driver.find_element_by_xpath(elements['field'])
-    v_field.send_keys("alter do chao")
+    """ v_field = driver.find_element_by_xpath(elements['field']) - sintaxe substituído pela sintaxe abaixo """
+    v_field = driver.find_element(by=By.XPATH, value=elements['field'])
+    v_field.send_keys(elements['text'])
     sleep(2)
     v_field.send_keys(Keys.ENTER)
 
